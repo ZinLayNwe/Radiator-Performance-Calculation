@@ -1,5 +1,6 @@
 % Radiator Performance Calculation
 % Written by DZLN & UPMT on 4-April-2024 ,  MATLAB version: R2023b
+% This version doesn't round variables to 4 decimal place. 
 function [coolant_outT,T_Outlet_Air,eps] = evrad_calc(previous_value,TOutAir,Epsilon)
 % Radiator Design Dimensions
 Lrad = 0.63;                    % Length of Radiator, m
