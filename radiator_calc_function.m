@@ -140,7 +140,7 @@ NTU = UA / Cmin;                                                          	 % Nu
 eps = 1 - exp((1/Cr*NTU^0.22)*(exp(-Cr*NTU^0.78)-1));
 
 qmax = Cmin * (T_inlet_coolant-T_inlet_air);
-q_predicted = Epsilon * qmax;
+q_predicted = eps * qmax;
 
 coolant_outT = T_inlet_coolant - (q_predicted/C_coolant);
 T_Outlet_Air = T_inlet_air + (q_predicted/C_Air);
