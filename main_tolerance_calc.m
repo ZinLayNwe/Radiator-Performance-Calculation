@@ -26,11 +26,13 @@ while abs(current_value - previous_value) >= tolerance
     previous_value = current_value;
     
     % Calculate the new current_value using the example function or some process
-    [current_value, T_Outlet_Air, Epsilon] = evrad_calc(previous_value,T_Outlet_Air,Epsilon);
+    [current_value, T_Outlet_Air, Epsilon] = radiator_calc_function_pt4(previous_value,T_Outlet_Air,Epsilon);
     
     % Display the iteration number and current error difference
     % fprintf('Iteration %d: Current Value = %.6f, Error Difference = %.6f\n', iteration, current_value, abs(current_value - previous_value));
 end
 
 % Display the final result
-fprintf('Final Value of Coolant Outlet Temp: %.4f K and Air Outlet Temp: %.4f K after %d iterations with Error Difference = %.6f\n', current_value, T_Outlet_Air, iteration, abs(current_value - previous_value));
+fprintf('After %d iterations with Error Difference = %.4f\n', iteration, abs(current_value - previous_value))
+fprintf('Final Value of Coolant Outlet Temp: %.4f K\n', current_value) 
+fprintf('Final Value of Air Outlet Temp:     %.4f K\n', T_Outlet_Air)
